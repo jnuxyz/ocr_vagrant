@@ -7,6 +7,11 @@ Vagrant.configure("2") do |config|
     config.vm.network "private_network", ip: "192.168.66.6"
     config.vm.network "forwarded_port", guest: 8080, host: 8080
     config.vm.network "forwarded_port", guest: 2022, host: 2022
+
+    # Si on veut utiler le Dockerfile en local et non par Git
+    # Ne pas oublier de retirer la commande "curl https://.../Dockerfile -so Dockerfile" du shell ci-dessous
+    # Et d'avoir le Dockerfile dans le même dossier que le Vagrantfile
+    # config.vm.provision "file", source: "Dockerfile", destination: "Dockerfile"
     
     config.vm.provision "shell", inline: <<-SHELL
         apt update
