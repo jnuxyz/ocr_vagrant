@@ -19,7 +19,6 @@ Vagrant.configure("2") do |config|
         apt install -y emacs-nox ansible docker-ce docker-ce-cli containerd.io
         usermod -aG docker vagrant
         curl https://raw.githubusercontent.com/jnuxyz/ocr_projet_03_docker/main/Dockerfile -so Dockerfile
-        curl https://raw.githubusercontent.com/jnuxyz/ocr_projet_03_docker/main/start.sh -so start.sh
         docker build -t ocr_env .
         docker run -d -p 8080:80 -p 2022:22 --name envOcr ocr_env
     SHELL
