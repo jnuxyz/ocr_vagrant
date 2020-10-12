@@ -28,24 +28,26 @@ Construire avec Vagrant une machine virtuelle Debian 10 avec Emacs, Ansible et D
     vagrant status
     ```
 
-4. Se connecter à la machine virtuelle **ocr** en SSH :
+## Utilisation
+
+1. Se connecter à la machine virtuelle **ocr** en SSH :
 
     ```shell
     vagrant ssh
     ```
 
-    > Voir le dépôt <a href="https://github.com/jnuxyz/ocr_projet_03_docker" target="_blank">OCR Projet 03 Docker</a>
+    > Voir le dépôt [OCR Projet 03 Docker](https://github.com/jnuxyz/ocr_projet_03_docker)
 
-5. Arrêter la machine virtuelle **ocr** en cours d’exécution :
+2. Arrêter la machine virtuelle **ocr** en cours d’exécution :
 
     ```shell
     vagrant halt
     ```
 
-6. Arrêter et détruire la machine virtuelle **ocr** :
+3. Arrêter et détruire la machine virtuelle **ocr** :
 
     ```shell
     vagrant destroy
     ```
 
-Pour voir toutes les commandes Vagrant : `vagrant --help` ou voir la <a href="https://www.vagrantup.com/docs/cli" target="_blank">documentation Vagrant</a>.
+Pour voir toutes les commandes Vagrant : `vagrant --help` ou voir la [documentation Vagrant](https://www.vagrantup.com/docs/cli).
