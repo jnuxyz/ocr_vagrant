@@ -4,11 +4,11 @@
 Vagrant.configure("2") do |config|
     # Spécifie le nom de la box sur laquelle la VM doit être construite
     config.vm.box = "debian/buster64"
-    # Défini le nom d'hôte de la VM
+    # Définit le nom d'hôte de la VM
     config.vm.hostname = 'ocr'
     # Spécifie de fonctionner en réseau privé et d'utiliser une adresse IP statique pour la VM
     config.vm.network "private_network", ip: "192.168.66.6"
-    # Défini les redirections de ports de la VM 
+    # Définit les redirections de ports de la VM 
     # Port invité suivi du port hôte par lequel le port invité est accessible
     config.vm.network "forwarded_port", guest: 8080, host: 8080
     config.vm.network "forwarded_port", guest: 2022, host: 2022
