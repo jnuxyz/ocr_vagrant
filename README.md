@@ -16,7 +16,7 @@ Construire avec Vagrant une machine virtuelle Debian 10 avec Emacs, Ansible et D
     cd ocr_vagrant
     ```
 
-2. Crée et configure la machine virtuelle **ocr** en fonction du Vagrantfile :
+2. Créer et configurer la machine virtuelle **ocr** en fonction du Vagrantfile :
 
     ```shell
     vagrant up
