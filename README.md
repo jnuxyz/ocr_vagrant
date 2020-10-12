@@ -16,31 +16,31 @@ Construire avec Vagrant une machine virtuelle Debian 10 avec Emacs, Ansible et D
     cd ocr_vagrant
     ```
 
-2. Crée et configure la machine virtuelle en fonction du Vagrantfile :
+2. Crée et configure la machine virtuelle **ocr** en fonction du Vagrantfile :
 
     ```shell
     vagrant up
     ```
 
-3. Vérifier l’état de la machine virtuelle :
+3. Vérifier l’état de la machine virtuelle **ocr** :
 
     ```shell
     vagrant status
     ```
 
-4. Se connecter à la machine virtuelle en SSH :
+4. Se connecter à la machine virtuelle **ocr** en SSH :
 
     ```shell
     vagrant ssh
     ```
 
-5. Arrêter la machine virtuelle en cours d’exécution :
+5. Arrêter la machine virtuelle **ocr** en cours d’exécution :
 
     ```shell
     vagrant halt
     ```
 
-6. Arrêter et détruire machine virtuelle en cours d’exécution :
+6. Arrêter et détruire machine virtuelle **ocr** en cours d’exécution :
 
     ```shell
     vagrant destroy
