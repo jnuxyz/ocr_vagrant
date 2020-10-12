@@ -40,7 +40,7 @@ Construire avec Vagrant une machine virtuelle Debian 10 avec Emacs, Ansible et D
     vagrant halt
     ```
 
-6. Arrêter et détruire machine virtuelle **ocr** :
+6. Arrêter et détruire la machine virtuelle **ocr** :
 
     ```shell
     vagrant destroy
