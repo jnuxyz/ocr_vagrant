@@ -40,7 +40,7 @@ Vagrant.configure("2") do |config|
 
     # Permet la configuration de paramètres VirtualBox
     config.vm.provider :virtualbox do |v|
-        # Personnaliser le nom qui apparaît dans l'interface graphique de VirtualBox
+        # Personnalise le nom qui apparaît dans l'interface graphique de VirtualBox
         v.name = "ocr"
     end
 end
