@@ -1,49 +1,49 @@
-# OCR Vagrant Projet 3
+# OCR Vagrant Projet 03
 
 Construire avec Vagrant une machine virtuelle Debian 10 avec Emacs, Ansible et Docker.
 
 ## Prérequis
 
-- Vagrant v2.0+
-- VirtualBox v6.0+
+- Vagrant v2+
+- VirtualBox v6+
 
 ## Installation
 
-1 - Cloner le projet et se déplacer dans son répertoire :
+1. Cloner le projet et se déplacer dans son répertoire :
 
-```shell
-git clone https://github.com/jnuxyz/ocr_vagrant.git
-cd ocr_vagrant
-```
+    ```shell
+    git clone https://github.com/jnuxyz/ocr_vagrant.git
+    cd ocr_vagrant
+    ```
 
-2 - Crée et configure la machine virtuelle en fonction du Vagrantfile :
+2. Crée et configure la machine virtuelle en fonction du Vagrantfile :
 
-```shell
-vagrant up
-```
+    ```shell
+    vagrant up
+    ```
 
-3 - Vérifier l’état de la machine virtuelle :
+3. Vérifier l’état de la machine virtuelle :
 
-```shell
-vagrant status
-```
+    ```shell
+    vagrant status
+    ```
 
-4 - Se connecter à la machine virtuelle en SSH :
+4. Se connecter à la machine virtuelle en SSH :
 
-```shell
-vagrant ssh
-```
+    ```shell
+    vagrant ssh
+    ```
 
-5 - Arrêter la machine virtuelle en cours d’exécution :
+5. Arrêter la machine virtuelle en cours d’exécution :
 
-```shell
-vagrant halt
-```
+    ```shell
+    vagrant halt
+    ```
 
-6 - Arrêter et détruire machine virtuelle en cours d’exécution :
+6. Arrêter et détruire machine virtuelle en cours d’exécution :
 
-```shell
-vagrant destroy
-```
+    ```shell
+    vagrant destroy
+    ```
 
 Pour voir toutes les commandes Vagrant : `vagrant --help` ou voir la [documentation Vagrant](https://www.vagrantup.com/docs/cli).

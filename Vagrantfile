@@ -7,6 +7,9 @@ Vagrant.configure("2") do |config|
     config.vm.network "private_network", ip: "192.168.66.6"
     config.vm.network "forwarded_port", guest: 8080, host: 8080
     config.vm.network "forwarded_port", guest: 2022, host: 2022
+
+    # Si on veut copier des fichiers dans la VM
+    # config.vm.provision "file", source: "Dockerfile", destination: "Dockerfile"
     
     config.vm.provision "shell", inline: <<-SHELL
         apt update
