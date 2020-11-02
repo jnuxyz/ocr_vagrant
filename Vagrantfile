@@ -11,7 +11,11 @@ Vagrant.configure("2") do |config|
     # Définit les redirections de ports de la VM 
     # Port invité suivi du port hôte par lequel le port invité est accessible
     config.vm.network "forwarded_port", guest: 8080, host: 8080
+    config.vm.network "forwarded_port", guest: 4433, host: 4433
     config.vm.network "forwarded_port", guest: 2022, host: 2022
+    config.vm.network "forwarded_port", guest: 8000, host: 8000
+
+    #config.vm.synced_folder "home_vagrant", "/home/vagrant/", type: "nfs"
 
     # Si on veut copier des fichiers dans la VM
     # config.vm.provision "file", source: "Dockerfile", destination: "Dockerfile"
@@ -32,8 +36,8 @@ Vagrant.configure("2") do |config|
         add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/debian $(lsb_release -cs) stable"
         # Mise à jour dépôts
         apt update
-        # Installe Emacs, Ansible et Docker
-        apt install -y emacs-nox ansible docker-ce docker-ce-cli containerd.io
+        # Installe Vim, Ansible et Docker
+        apt install -y vim ansible docker-ce docker-ce-cli containerd.io
         # Ajoute l'utilisateur 'vagrant' au groupe 'docker'
         usermod -aG docker vagrant
     SHELL
@@ -42,5 +46,7 @@ Vagrant.configure("2") do |config|
     config.vm.provider :virtualbox do |v|
         # Personnalise le nom qui apparaît dans l'interface graphique de VirtualBox
         v.name = "ocr"
+        v.memory = 5120
+        v.cpus = 3
     end
 end
