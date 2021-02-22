@@ -46,10 +46,16 @@ Vagrant.configure("2") do |config|
     SHELL
 
     # Permet la configuration de paramètres VirtualBox
-    config.vm.provider :virtualbox do |v|
+    config.vm.provider "virtualbox" do |v|
         # Personnalise le nom qui apparaît dans l'interface graphique de VirtualBox
         v.name = "ocr"
         v.memory = 4096
         v.cpus = 2
+    end
+    config.vm.provider "libvirt" do |d|
+    	d.name = "ocr"
+      	d.memory = 4096
+      	d.graphics_type = "none"
+      	d.cpus = 2
     end
 end
