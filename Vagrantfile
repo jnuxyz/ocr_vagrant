@@ -13,6 +13,8 @@ Vagrant.configure("2") do |config|
     config.vm.network "forwarded_port", guest: 80, host: 80
     config.vm.network "forwarded_port", guest: 443, host: 443
     config.vm.network "forwarded_port", guest: 22, host: 22
+    
+    config.vm.box_check_update = false
 
     #config.vm.synced_folder "home_vagrant", "/home/vagrant/"
 
@@ -49,13 +51,7 @@ Vagrant.configure("2") do |config|
     config.vm.provider "virtualbox" do |v|
         # Personnalise le nom qui apparaît dans l'interface graphique de VirtualBox
         v.name = "ocr"
-        v.memory = 4096
+        v.memory = 3072
         v.cpus = 2
-    end
-    config.vm.provider "libvirt" do |d|
-    	d.name = "ocr"
-      	d.memory = 4096
-      	d.graphics_type = "none"
-      	d.cpus = 2
     end
 end
